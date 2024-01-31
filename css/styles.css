@@ -1,0 +1,260 @@
+:root{
+    font-size: 10px;
+
+    --font-family: 'Titillium Web', sans-serif;
+
+    --white: #eff1f3;
+    --black: #0D0A0B;
+    --grey: #454955;
+    --red: #DF2935;
+    --orange: #FDCA40;
+
+    --margin: 6vw;
+
+    --transition: 0.1s ease;
+
+}
+
+*, html, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    min-height: 100% !important;
+    color: var(--black);
+}
+
+body{
+    font-family: var(--font-family);
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+html{
+    line-height: 1.2 !important;
+}
+
+p{
+    line-height: 1.5 !important;
+}
+
+/* Extra large screens (1200+px) */
+@media screen and (min-width: 1200px){
+    :root{
+        font-size: 10px;
+        --margin: 6vw;
+    }
+}
+
+/* Large screens (700-1199px) */
+@media screen and (max-width: 1199px){
+    :root{
+        font-size: 9.5px;
+        --margin: 5vw;
+    }
+}
+/* Laptops (450-700px) */
+@media screen and (max-width: 700px){
+    :root{
+        font-size: 8.5px;
+        --margin: 4vw;
+    }
+
+    .navBar li:not(:last-child) {
+        display: none;
+    }
+
+    .navBar li:last-child {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+   
+    .navBar.responsive {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .navBar.responsive ul {
+        background-color: var(--black);
+        width: 100vw;
+        padding: 1.6rem 0;
+        
+    }
+
+    .navBar.responsive li:last-child {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navBar.responsive li:not(:last-child) {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+   
+    .navBar.responsive li:not(:last-child) a {
+        width: 100vw;
+    }
+    
+    .navBar.responsive .top-level-menu > li {
+        float: none;
+        height: auto;
+    }
+}
+
+
+
+
+    
+
+/* Mobile (-450px) */
+@media screen and (max-width: 450px){
+    :root{
+        font-size: 7.5px;
+        --margin: 3vw;
+    }
+}
+
+
+
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    height: 8rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+  }
+  
+  li {
+    
+    float: right;
+    /* margin: 7.2rem 0 */
+    padding: 1.6rem
+    
+  }
+  
+  li a {
+   
+    color: var(--white);
+    text-align: center;
+    padding: 1.6rem;
+    /* margin: 3.2rem 0; */
+    text-decoration: none;
+    font-size: 1.6rem;
+    
+  }
+  
+  li a:hover:not(.active) {
+    color: var(--grey);
+  }
+  
+  .active {
+    color: var(--red);
+    cursor: default;
+  }
+
+
+
+
+.banner{
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(13, 10, 10, 1) 0%, rgba(13, 10, 10, 0.2) 100%), url(../images/roope.jpg);
+
+    /* Jos kuva ei ole tarpeeksi iso, zoomataan sisään: */
+    background-size: cover;
+
+    /* Kuvaa ei toisteta: */
+    background-repeat: no-repeat;
+
+    /* Mihin zoomataan: */
+    background-position: left;
+
+    /* Kuva pysyy paikallaan, ei seuraa scrollia: */
+    background-attachment: fixed;    
+   
+    /* Aloitetaan flex: */
+    display: flex;
+
+    /* X-akselille sijoitus */
+    justify-content: flex-start;
+
+    /* Y-akselille sijoitus */
+    align-items: center;
+
+    padding: 0 var(--margin);
+
+    color: var(--white)
+}
+
+.banner-content{
+    padding-top: calc(8rem + 5vh);
+    
+}
+
+.banner-title h1{
+    font-size: calc(4.5rem + 2.5vh);
+    font-weight: 900;
+    text-align: left;
+    line-height: 1;
+}
+
+.banner-text{
+    max-width: 100ch;
+    margin-top: 4rem;
+}
+
+.banner-text p{
+    font-size: calc(1.6rem + 0.2vw);
+}
+
+.banner-button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.banner-button a{
+    color:var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: solid 1px;
+    padding: 1rem 4rem;
+    background: rgba(13, 10, 10, 0.4);
+    transition: opacity var(--transition);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.banner-button a:hover{
+    opacity: 0.8;
+    color: var(--red)
+}
+
+.mobileMenu{
+    display: none;
+}

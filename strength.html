@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roope Santeri Salminen</title>
+    <meta name="description" content="Roopen portfolio sivut">
+    <meta name="keywords" content="Portfolio">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/strength.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97f4b4e3c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="myTopNav" class="navBar">
+        <ul class="topLevelMenu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a class="active" href="strength.html">Strength</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li class="mobileMenu"><a href="javascript:void(0);" class="icon" onclick ="myFunction()"><i class="fa fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="banner">
+        <div class="banner-content">
+            <div class="banner-title">
+                <h2>Strength training</h2>
+            </div>
+
+            <div class="banner-text">
+                <p>Some of my thus far happiest moments in training:</p>
+            </div>
+            <div class="videot">
+                <video class="video" width="360" height="450" controls>
+                    <source src="videos/strengthvid1.mp4" type="video/mp4">
+                </video>
+                <video class="video" width="360" height="450" controls>
+                    <source src="videos/strengthvid2.mp4" type="video/mp4">
+                </video>
+                <video class="video" width="360" height="450" controls>
+                    <source src="videos/strengthvid3.mp4" type="video/mp4">
+                </video>
+                <video class="video" width="360" height="450" controls>
+                    <source src="videos/strengthvid5.mp4" type="video/mp4">
+                </video>
+                
+                
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopNav");
+            if (x.className === "navBar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navBar";
+            }
+        }
+    </script>
+</body>
+
+</html>

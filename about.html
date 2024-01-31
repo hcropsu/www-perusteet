@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roope Santeri Salminen</title>
+    <meta name="description" content="Roopen portfolio sivut">
+    <meta name="keywords" content="Portfolio">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97f4b4e3c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <nav id="myTopNav" class="navBar">
+        <ul class="topLevelMenu">
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="strength.html">Strength</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li class="mobileMenu"><a href="javascript:void(0);" class="icon" onclick ="myFunction()"><i class="fa fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="banner">
+        <div class="banner-content">
+            <div class="banner-title">
+                <h1>An important disclaimer</h1>
+            </div>
+
+            <div class="banner-text">
+                <p>
+                This site is a tongue-in-cheek demonstration of a simple black & white design idea. As this is meant to be a portfolio, 
+                the whole site has been designed to have an excessive 'Hey, look at me!' -feel to it. 
+                </p>
+                <br>
+                <p>
+                I aim to be a lot less smug in real life.
+                </p>
+                <br>
+                <p>
+                Also, I have to credit Ere Männistö for his informative tutorials on building a website. Some of the tools used in creating this site
+                were inspired by his instructional videos.
+                </p>
+                <br>
+                <p>
+                I did manage to solve a few of the encountered problems by myself as well. E.g. how to use 'height: auto;'
+                and 'min-height: 100vh;' to prevent the content from creating white background once the content height exceeded the value of 100vh when using only 'height: 100vh;'.
+                The video containers also use scaling based on the viewport's width.
+                </p>
+                <br>
+                <p>
+                I was also able to construct the responsive 'hamburger' -menu with examples from W3Schools and the material provided by the lecturer Henri Koukka, though I'm not fully satisfied
+                with the result.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopNav");
+            if (x.className === "navBar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navBar";
+            }
+        }
+    </script>
+</body>
+
+</html>
